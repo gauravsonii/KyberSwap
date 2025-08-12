@@ -1,0 +1,539 @@
+.import-account {
+  border-radius: 3px;
+
+  &__choose-wallet-container {
+    padding: 0 1rem 20px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 auto 25px;
+    text-align: center;
+
+    &-separator {
+      width: 100%;
+      margin: 0 auto;
+      border-bottom: 1px solid;
+    }
+
+    &-content {
+      color: $text-orange;
+      width: 200px;
+      position: relative;
+      bottom: 13px;
+      margin: 0 auto -20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1550px;
+    margin: 0 auto;
+
+    @include animation(slideInUp) {
+      animation-duration: 0.3s;
+      animation-timing-function: ease-out;
+    }
+
+    &--mobile {
+      display: block;
+
+      .import-account__item {
+        margin-top: 15px;
+        width: auto;
+        height: auto;
+        border-radius: 3px;
+        color: $grey-darker;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.download-app{
+          .import-account__block-right--comming-soon{
+            background-color: #6f6f6f;
+            border: none;
+            color: #fff;
+            font-size: 11px;
+            pointer-events: none;
+          }
+
+          .import-account__block-right--download {
+            color: white;
+            border-color: #ef8102;
+            background-color: #ef8102;
+          }
+        }
+      }
+
+      .import-account__block {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        height: unset;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 3px 14px 1px rgba(0, 0, 0, 0.08);
+
+        &:hover {
+          background-color: transparent !important;
+
+          .import-account__name {
+            color: inherit !important;
+          }
+        }
+
+        &-left {
+          display: flex;
+          align-items: center;
+        }
+
+        &-right {
+          display: block;
+          font-size: 12px;
+          color: $grey-dark;
+          width: 100px;
+          padding: 8px 0;
+          text-align: center;
+          cursor: pointer;
+          transition: all .3s;
+          border: 1px solid $grey-dark;
+          border-radius: 3px;
+
+          &:hover {
+            color: white;
+            border-color: #ef8102;
+            background-color: #ef8102;
+          }
+        }
+      }
+
+      .import-account__icon {
+        margin-right: 16px;
+
+        &.kyberapp {
+          width: 30px;
+          height: 33px;
+          background-size: 250%;
+          margin-right: 6px;
+        }
+      }
+
+      .import-account__name {
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+
+      .import-account__desc {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__item {
+    width: 120px;
+    margin: 0 0 12px;
+    &.large{
+      width: 160px;
+    }
+    >div {
+      height: 100%;
+    }
+
+    &-ledger, &-trezor {
+      >div >div {
+        height: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--disabled {
+      opacity: 0.6;
+      cursor: initial;
+      pointer-events: none;
+    }
+
+    @include screen-max-width(xxsmall) {
+      width: 48%;
+    }
+
+    @include screen-max-width(small) {
+      width: 100%;
+    }
+  }
+
+  &__block {
+    height: 100%;
+    display: flex;
+    position: relative;
+    padding: 6px 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+    outline: none;
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &.other{
+      .promo-code{
+        visibility: hidden;
+      }
+
+      span{
+        position: absolute;
+        left: 15px;
+        font-size: 40px;
+        top: -17px;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+
+      .import-account__name {
+        color: #ff9008;
+      }
+
+      .import-account__icon {
+        background-position: -31px 0;
+
+        &.kyberapp {
+          background-position: -51px 0;
+        }
+
+        &.wallet-link {
+          background-position: -26px 2px;
+        }
+
+        &.wallet-connect {
+          background-position: -31px 5px;
+        }
+
+        &.torus {
+          background-position: -23px 3px;
+        }
+
+        &.other {
+          background-position: -31px 9px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    background: 0 0 no-repeat;
+
+    &.metamask {
+      background-image: url($image-path + 'import-account/wallets/metamask.svg');
+    }
+
+    &.ledger {
+      background-image: url($image-path + 'import-account/wallets/ledger.svg');
+    }
+
+    &.trezor {
+      width: 14px;
+      background-image: url($image-path + 'import-account/wallets/trezor.svg');
+    }
+
+    &.json {
+      background-image: url($image-path + 'import-account/wallets/keystore.svg');
+    }
+
+    &.private-key {
+      background-image: url($image-path + 'import-account/wallets/private-key.svg');
+    }
+
+    &.promo-code{
+      width: 15px;
+      background-image: url($image-path + 'import-account/wallets/promo-code.svg');
+    }
+
+    &.kyberapp {
+      width: 15px;
+      background-image: url($image-path + 'import-account/wallets/promo-code.svg');
+    }
+
+    &.wallet-link {
+      background-position: 5px 2px;
+      width: 21px;
+      background-image: url($image-path + 'import-account/wallets/wallet-link.svg');
+    }
+
+    &.wallet-connect {
+      background-position: 0;
+      background-image: url($image-path + 'import-account/wallets/wallet-connect.svg');
+    }
+
+    &.torus {
+      width: 14px;
+      background-position: 0;
+      background-image: url($image-path + 'import-account/wallets/torus.svg');
+    }
+
+    &.other {
+      margin-right: 0;
+      background-position: 0;
+      background-image: url($image-path + 'import-account/wallets/wallet-other.svg');
+    }
+
+    &.kyberapp {
+      background-position: -51px 0;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .column-block {
+    margin: 0;
+  }
+
+  &__wallet-container {
+    display: flex;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 20px 1rem;
+  }
+
+  &__wallet-connect {
+    padding-right: 20px;
+    width: 120px;
+    margin-right: 30px;
+    font-size: 13px;
+    color: #666666;
+    border-right: 1px solid #cccccc;
+    cursor: pointer;
+    transition: color .2s;
+
+    &:hover {
+      color: #ef8102;
+      text-decoration: underline;
+    }
+  }
+
+  &__wallet-type {
+    display: flex;
+    align-items: center;
+
+    &.mobile {
+      display: none;
+    }
+  }
+
+  &__wallet-image {
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  &__wallet-content {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+  }
+
+  &__wallet-title {
+    font-size: 16px;
+  }
+
+  &__wallet-name {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  @include screen-max-width(xxmedium) {
+    border: none;
+    box-shadow: none;
+
+    &__wallet-type {
+      padding: 5px 10px;
+      display: none;
+    }
+
+    &__wallet-container {
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    &__wallet-connect {
+      padding: 0 0 0 25px;
+      width: unset;
+      border: none;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url($image-path + 'icons/arrow-back.svg');
+        position: absolute;
+        top: 1px;
+        left: 0;
+      }
+    }
+
+    &__wallet-image {
+      width: 20px;
+      margin-right: 12px;
+      height: unset;
+    }
+
+    &__wallet-title,
+    &__wallet-name {
+      font-size: 14px;
+    }
+  }
+}
+
+.import-privatekey {
+  padding: 0 !important;
+
+  .title {
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 0;
+    padding-top: 50px;
+    font-weight: 600;
+    line-height: 1.71;
+    letter-spacing: -0.4px;
+  }
+
+  .content {
+    &.with-overlap {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      input {
+        outline: none;
+        box-shadow: none;
+        border-color: #e5e5e5;
+      }
+    }
+  }
+
+  .overlap {
+    margin-top: 10px;
+    padding: 20px 45px 45px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .accent {
+      line-height: 45px;
+      padding: 0 35px;
+      background: #ef8102;
+      color: white;
+      font-size: 14px;
+      width: 100%;
+      max-width: 150px;
+      border-radius: 3px;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      border: none;
+    }
+  }
+
+  #private_key {
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #666666;
+    height: 45px;
+    padding: 0 45px;
+    font-size: 18px;
+
+    &.security {
+      font-size: 25px;
+    }
+  }
+}
+
+.import-promocode {
+  @extend .import-privatekey;
+}
+
+.keystore-modal{
+  .title{
+    font-size: 18px !important;
+    text-align: center;
+  }
+  .unlock-btn-wrapper{
+    text-align: center;
+  }
+
+  #keystore-pass {
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #666666;
+    height: 45px;
+    padding: 0 45px;
+    outline: none;
+    box-shadow: none;
+    font-size: 18px;
+
+    &.security {
+      font-size: 25px;
+    }
+  }
+}
+
+.reimport-modal {
+  .title {
+    font-size: 18px !important;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .content{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 0;
+
+    .confirm-btn,
+    .cancel-btn {
+      padding: 10px 35px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .confirm-btn {
+      background-color: #EF8102;
+      margin-right: 20px;
+    }
+
+    .cancel-btn {
+      background-color: #a2a7b2;
+    }
+  }
+}

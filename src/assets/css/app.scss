@@ -1,0 +1,99 @@
+@import "commons/fonts";
+@import "commons/animations";
+@import 'commons/settings';
+@import 'commons/commons';
+@import 'broadcast';
+@import 'addresses';
+@import 'tokens';
+@import 'account-balance';
+@import "~react-table/react-table.css";
+@import "token_select";
+@import "advance_config";
+@import "exchange";
+@import "market";
+@import "import_account";
+@import "transfer";
+@import "slide_down";
+@import "slider";
+@import "top-token";
+@import "pagination";
+@import "limit-order";
+@import "quote-market";
+@import "components/trading-view";
+@import "themes/index";
+@import "import-modal";
+@import "portfolio";
+@import "inline-loading";
+
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  font-family: $font-roboto;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+#swap-app {
+  max-width: $width-app;
+  margin: 0 auto;
+}
+
+.security {
+  font-family: $font-security;
+  font-size: 25px;
+}
+
+.hide {
+  display: none;
+}
+
+.error-text {
+  color: $alert-color;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grey-darker;
+  border-radius: 10px;
+}
+
+.color-grey-darker{
+  color: $grey-darker;
+};
+
+.p-l-50px{
+  padding-left: 50px!important;
+}
+.p-a-20px{
+  padding: 20px!important
+}

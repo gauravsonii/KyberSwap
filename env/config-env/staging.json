@@ -1,0 +1,371 @@
+{
+    "connections": {
+        "http": [
+            {
+                "endPoint": "https://staging-cache.knstats.com",
+                "type": "cached"
+            },
+            {
+                "endPoint": "https://dev-ethereum.knstats.com/v1/mainnet/geth",
+                "type": "prune"
+            }
+        ],
+        "ws": "wss://mainnet.infura.io/ws"
+    },
+    "min_accept_amount": 0.01,
+    "kyberswap_api": "https://staging-kyberswap.knstats.com/api",
+    "portfolio_api": "https://staging-portfolio.knstats.com",
+    "priority_tokens": [
+        "ETH",
+        "DAI",
+        "KNC"
+    ],
+    "limitOrder": {
+        "minSupportOrder": 0.001,
+        "maxPercentTriggerRate": 900,
+        "page_size": 50
+    },
+    "promo_token": "PT",
+    "indexForTrending": "USDT",
+    "wrapETHToken": "WETH",
+    "tokens": {
+        "ETH": {
+            "symbol": "ETH",
+            "name": "Ethereum",
+            "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "decimals": 18,
+            "gasLimit": "0",
+            "sp_limit_order": true,
+            "is_quote": true,
+            "quote_priority": 2
+        },
+        "WETH": {
+            "symbol": "WETH",
+            "name": "Wrapped Ether",
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "decimals": 18,
+            "sp_limit_order": true,
+            "is_quote": true,
+            "quote_priority": 2
+        },
+        "KNC": {
+            "symbol": "KNC",
+            "name": "KyberNetwork",
+            "address": "0xdd974d5c2e2928dea5f71b9825b8b646686bd200",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "SAI": {
+            "symbol": "SAI",
+            "name": "SAI",
+            "address": "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359",
+            "decimals": 18,
+            "gasLimit": "650000",
+            "sp_limit_order": true,
+            "is_quote": true,
+            "quote_priority": 3,
+            "is_gas_fixed": true
+        },
+        "DAI": {
+            "symbol": "DAI",
+            "name": "DAI",
+            "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+            "decimals": 18,
+            "gasLimit": "650000",
+            "priority": true,
+            "is_gas_fixed": true
+        },
+        "OMG": {
+            "symbol": "OMG",
+            "name": "OmiseGO",
+            "address": "0xd26114cd6ee289accf82350c8d8487fedb8a0c07",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "SNT": {
+            "symbol": "SNT",
+            "name": "Status",
+            "address": "0x744d70fdbe2ba4cf95131626614a1763df805b9e",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "POWR": {
+            "symbol": "POWR",
+            "name": "Power Ledger",
+            "address": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
+            "decimals": 6,
+            "sp_limit_order": true
+        },
+        "MANA": {
+            "symbol": "MANA",
+            "name": "Mana",
+            "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "BAT": {
+            "symbol": "BAT",
+            "name": "Basic Attention Token",
+            "address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "REQ": {
+            "symbol": "REQ",
+            "name": "Request",
+            "address": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "RDN": {
+            "symbol": "RDN",
+            "name": "Raiden",
+            "address": "0x255aa6df07540cb5d3d297f0d0d4d84cb52bc8e6",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "APPC": {
+            "symbol": "APPC",
+            "name": "AppCoins",
+            "address": "0x1a7a8bd9106f2b8d977e08582dc7d24c723ab0db",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "ENG": {
+            "symbol": "ENG",
+            "name": "Enigma",
+            "address": "0xf0ee6b27b759c9893ce4f094b49ad28fd15a23e4",
+            "decimals": 8,
+            "sp_limit_order": true
+        },
+        "BQX": {
+            "symbol": "BQX",
+            "name": "Ethos",
+            "address": "0x5af2be193a6abca9c8817001f45744777db30756",
+            "decimals": 8,
+            "sp_limit_order": true
+        },
+        "RCN": {
+            "symbol": "RCN",
+            "name": "Ripio Credit Network",
+            "address": "0xf970b8e36e23f7fc3fd752eea86f8be8d83375a6",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "LINK": {
+            "symbol": "LINK",
+            "name": "Chain Link",
+            "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "DGX": {
+            "symbol": "DGX",
+            "name": "Digix Gold Token",
+            "address": "0x4f3afec4e5a3f2a6a1a411def7d7dfe50ee057bf",
+            "decimals": 9,
+            "sp_limit_order": true
+        },
+        "ABT": {
+            "symbol": "ABT",
+            "name": "ArcBlock",
+            "address": "0xb98d4c97425d9908e66e53a6fdf673acca0be986",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "ENJ": {
+            "symbol": "ENJ",
+            "name": "Enjin Coin",
+            "address": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "BLZ": {
+            "symbol": "BLZ",
+            "name": "Bluezelle",
+            "address": "0x5732046a883704404f284ce41ffadd5b007fd668",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "ELEC": {
+            "symbol": "ELEC",
+            "name": "ElectrifyAsia",
+            "address": "0xd49ff13661451313ca1553fd6954bd1d9b6e02b9",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "DTA": {
+            "symbol": "DTA",
+            "name": "Data",
+            "address": "0x69b148395ce0015c13e36bffbad63f49ef874e03",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "BNT": {
+            "symbol": "BNT",
+            "name": "Bancor",
+            "address": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "TUSD": {
+            "symbol": "TUSD",
+            "name": "TrueUSD",
+            "address": "0x8dd5fbce2f6a956c3022ba3663759011dd51e73e",
+            "decimals": 18,
+            "gasLimit": "715000",
+            "sp_limit_order": true,
+            "is_quote": true,
+            "quote_priority": 3,
+            "is_gas_fixed": true
+        },
+        "LEND": {
+            "symbol": "LEND",
+            "name": "EthLend",
+            "address": "0x80fb784b7ed66730e8b1dbd9820afd29931aab03",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "REP": {
+            "symbol": "REP",
+            "name": "Augur",
+            "address": "0x1985365e9f78359a9b6ad760e32412f4a445e862",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "ZRX": {
+            "symbol": "ZRX",
+            "name": "0x Protocol",
+            "address": "0xe41d2489571d322189246dafa5ebde1f4699f498",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "REN": {
+            "symbol": "REN",
+            "name": "Republic",
+            "address": "0x408e41876cccdc0f92210600ef50372656052a38",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "QKC": {
+            "symbol": "QKC",
+            "name": "QuarkChain",
+            "address": "0xea26c4ac16d4a5a106820bc8aee85fd0b7b2b664",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "MKR": {
+            "symbol": "MKR",
+            "name": "Maker",
+            "address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "EKO": {
+            "symbol": "EKO",
+            "name": "EchoLink",
+            "address": "0xa6a840e50bcaa50da017b91a0d86b8b2d41156ee",
+            "decimals": 18,
+            "listing_time": 1541637525,
+            "sp_limit_order": true
+        },
+        "OST": {
+            "symbol": "OST",
+            "name": "Open Simple Token",
+            "address": "0x2c4e8f2d746113d0696ce89b35f0d8bf88e0aeca",
+            "decimals": 18,
+            "listing_time": 1541637525,
+            "sp_limit_order": true
+        },
+        "WBTC": {
+            "symbol": "WBTC",
+            "name": "Wrapped BTC",
+            "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "decimals": 8,
+            "listing_time": 1543375503,
+            "sp_limit_order": true,
+            "is_quote": true,
+            "quote_priority": 1
+        },
+        "ABYSS": {
+            "symbol": "ABYSS",
+            "name": "ABYSS",
+            "address": "0x0e8d6b471e332f140e7d9dbb99e5e3822f728da6",
+            "decimals": 18,
+            "listing_time": 1543462576,
+            "sp_limit_order": true
+        },
+        "USDC": {
+            "symbol": "USDC",
+            "name": "USD Coin",
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "decimals": 6,
+            "priority": true,
+            "sp_limit_order": true,
+            "is_quote": true,
+            "quote_priority": 3
+        },
+        "GEN": {
+            "symbol": "GEN",
+            "name": "DAOStack",
+            "address": "0x543ff227f64aa17ea132bf9886cab5db55dcaddf",
+            "decimals": 18,
+            "sp_limit_order": true
+        },
+        "SNX": {
+            "symbol": "SNX",
+            "name": "Synthetix Network",
+            "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+            "decimals": 18,
+            "gasLimit": "910000"
+        },
+        "USDT": {
+            "symbol": "USDT",
+            "name": "Tether USD",
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "decimals": 6
+        },
+        "PAX": {
+            "symbol": "PAX",
+            "name": "Paxos Standard",
+            "address": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
+            "decimals": 18
+        },
+        "SUSD": {
+            "symbol": "SUSD",
+            "name": "sUSD",
+            "address": "0x57ab1ec28d129707052df4df418d58a2d46d5f51",
+            "decimals": 18,
+            "gasLimit": "650000"
+        },
+        "SAN": {
+            "symbol": "SAN",
+            "name": "Santiment",
+            "address": "0x7c5a0ce9267ed19b22f8cae653f198e3e8daf098",
+            "decimals": 18
+        },
+        "USDS": {
+            "symbol": "USDS",
+            "name": "StableUSD",
+            "address": "0xa4bdb11dc0a2bec88d24a3aa1e6bb17201112ebe",
+            "decimals": 6
+        },
+        "EKG": {
+            "symbol": "EKG",
+            "name": "Ekon Gold",
+            "address": "0x6a9b3e36436b7abde8c4e2e2a98ea40455e615cf",
+            "decimals": 18
+        }
+    },
+    "ethScanUrl": "https://etherscan.io/",
+    "broadcastTx": "https://staging-broadcast.knstats.com/",
+    "enjinx": "https://kyber.enjinx.io/",
+    "reserve": "0x2c5a182d280eeb5824377b98cd74871f78d6b8bc",
+    "network": "0xc153eeAD19e0DBbDb3462Dcc2B703cC6D738A37c",
+    "kyberswapAddress": "0x072bfe95e2b8050221de8ab324ab11cc7d66d75b",
+    "wrapper": "0x6172AFC8c00c46E0D07ce3AF203828198194620a",
+    "networkId": 1,
+    "chainName": "Staging",
+    "tracker": "https://staging-api.knstats.com",
+    "highSlippage": 1
+}
